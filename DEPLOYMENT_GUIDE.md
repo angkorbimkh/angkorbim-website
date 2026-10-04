@@ -28,30 +28,23 @@ Cloudflare មាន Server CDN នៅជិតប្រទេសកម្ពុ
 
 ខ្ញុំបានបង្កើត file `CNAME` ដែលមានឈ្មោះ `www.angkorbim.com` និងបានធ្វើការ Commit កូដទាំងអស់រួចជាស្រេចនៅក្នុង Local Git Repository នេះ។
 
-### ជំហានទី ១: បង្កើត GitHub Repository និង Push កូដ
-1. ចូលទៅកាន់ [github.com](https://github.com/) រួច Login ចូលគណនី GitHub របស់អ្នក។
-2. ចុចសញ្ញា **+** នៅជ្រុងខាងស្តាំលើ -> ជ្រើសរើសយក **New repository**។
-3. ដាក់ឈ្មោះ Repository (ឧទាហរណ៍៖ `angkorbim-website`) ហើយកំណត់ជា **Public** (កុំទាន់ធិក README ឬ .gitignore ព្រោះយើងមានរួចហើយ)។
-4. ចុចប៊ូតុង **Create repository**។
-5. ចម្លង Link នៃ Repository របស់អ្នក រួចបើក Terminal/PowerShell ក្នុង Folder នេះ ហើយវាយបញ្ជា៖
-   ```bash
-   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/angkorbim-website.git
-   git push -u origin main
-   ```
-   *(ចំណាំ៖ សូមជំនួស `<YOUR_GITHUB_USERNAME>` ដោយឈ្មោះ Account GitHub របស់អ្នក)*
+### ជំហានទី ១: Push កូដឡើងទៅកាន់ GitHub (ខ្ញុំបានកំណត់ remote origin រួចរាល់)
+បើក Terminal ឬ PowerShell ក្នុង Folder នេះ ហើយវាយពាក្យបញ្ជាតែមួយបន្ទាត់ប៉ុណ្ណោះ៖
+```bash
+git push -u origin main
+```
+*(ប្រសិនបើមានផ្ទាំង Browser ឬ Login popup លោតឡើង សូមចុច Sign in with GitHub ឬបញ្ចូល Personal Access Token របស់អ្នក)*
 
 ---
 
 ### ជំហានទី ២: កំណត់ GitHub Pages & Custom Domain
-1. នៅលើទំព័រ GitHub Repository របស់អ្នក ចុចលើ Tab **Settings** (នៅ Menu ខាងលើ)។
-2. នៅ Menu ខាងឆ្វេង ស្វែងរកហើយចុចលើ **Pages**។
-3. នៅក្រោម **Build and deployment**:
+1. ចូលទៅកាន់ Link Repository របស់អ្នក៖ [https://github.com/angkorbimkh/angkorbim-website/settings/pages](https://github.com/angkorbimkh/angkorbim-website/settings/pages)
+2. នៅក្រោម **Build and deployment**:
    - **Source**: ជ្រើសរើស `Deploy from a branch`
    - **Branch**: ជ្រើសរើស `main` និង Folder `/ (root)`
    - ចុចប៊ូតុង **Save**
-4. នៅក្រោម **Custom domain**:
-   - លោកអ្នកនឹងឃើញប្រព័ន្ធទាញយកឈ្មោះ `www.angkorbim.com` ដោយស្វ័យប្រវត្តិពី file `CNAME` ដែលយើងបានបង្កើត។
-   - ប្រសិនបើពុំទាន់ឃើញ សូមវាយបញ្ចូល `www.angkorbim.com` រួចចុច **Save**។
+3. នៅក្រោម **Custom domain**:
+   - ប្រព័ន្ធនឹងទាញយកឈ្មោះ `www.angkorbim.com` ពី file `CNAME` ដោយស្វ័យប្រវត្តិ។ (ប្រសិនបើពុំទាន់ឃើញ សូមវាយបញ្ចូល `www.angkorbim.com` រួចចុច **Save**)។
    - ធិកលើប្រអប់ **Enforce HTTPS** (ដើម្បីឱ្យ Website ដំណើរការដោយមានសោរសុវត្ថិភាព `https://` ឥតគិតថ្លៃ)។
 
 ---
@@ -70,9 +63,7 @@ Cloudflare មាន Server CDN នៅជិតប្រទេសកម្ពុ
 #### ២. បន្ថែម CNAME Record ចំនួន ១ (សម្រាប់ `www.angkorbim.com`)
 | Type | Name / Host | Value / Target | TTL |
 | :--- | :--- | :--- | :--- |
-| **CNAME** | `www` | `<YOUR_GITHUB_USERNAME>.github.io` | Automatic / 1 Hour |
-
-*(ចំណាំ៖ សូមជំនួស `<YOUR_GITHUB_USERNAME>` ជាមួយឈ្មោះ Username GitHub របស់អ្នក ឧទាហរណ៍ `phearak.github.io`)*
+| **CNAME** | `www` | `angkorbimkh.github.io` | Automatic / 1 Hour |
 
 ---
 
