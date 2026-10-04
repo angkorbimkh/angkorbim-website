@@ -24,27 +24,61 @@ Cloudflare មាន Server CDN នៅជិតប្រទេសកម្ពុ
 
 ---
 
-## ជម្រើសទី 2: GitHub Pages (ឥតគិតថ្លៃជារៀងរហូត & ងាយស្រួលគ្រប់គ្រង Code)
+## ជម្រើសទី 2: GitHub Pages + ភ្ជាប់ Domain: www.angkorbim.com (ឥតគិតថ្លៃ & Free SSL)
 
-### របៀបធ្វើ៖
-1. ចូលទៅកាន់ [github.com](https://github.com/) ហើយបង្កើត Repository ថ្មីមួយ (ឧទាហរណ៍ឈ្មោះ៖ `angkorbim-website`) កំណត់ជា **Public**។
-2. Push កូដទាំងអស់នៅក្នុង Folder នេះទៅកាន់ GitHub៖
+ខ្ញុំបានបង្កើត file `CNAME` ដែលមានឈ្មោះ `www.angkorbim.com` និងបានធ្វើការ Commit កូដទាំងអស់រួចជាស្រេចនៅក្នុង Local Git Repository នេះ។
+
+### ជំហានទី ១: បង្កើត GitHub Repository និង Push កូដ
+1. ចូលទៅកាន់ [github.com](https://github.com/) រួច Login ចូលគណនី GitHub របស់អ្នក។
+2. ចុចសញ្ញា **+** នៅជ្រុងខាងស្តាំលើ -> ជ្រើសរើសយក **New repository**។
+3. ដាក់ឈ្មោះ Repository (ឧទាហរណ៍៖ `angkorbim-website`) ហើយកំណត់ជា **Public** (កុំទាន់ធិក README ឬ .gitignore ព្រោះយើងមានរួចហើយ)។
+4. ចុចប៊ូតុង **Create repository**។
+5. ចម្លង Link នៃ Repository របស់អ្នក រួចបើក Terminal/PowerShell ក្នុង Folder នេះ ហើយវាយបញ្ជា៖
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit for static Angkor BIM website"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_USERNAME>/angkorbim-website.git
+   git remote add origin https://github.com/<YOUR_GITHUB_USERNAME>/angkorbim-website.git
    git push -u origin main
    ```
-3. នៅលើទំព័រ GitHub Repository របស់អ្នក៖
-   - ចុចលើ **Settings** (នៅ Menu ខាងលើ)
-   - នៅ Sidebar ខាងឆ្វេង ចុចលើ **Pages**
-   - នៅត្រង់ **Branch** ជ្រើសរើសយក `main` និង Folder `/ (root)`
+   *(ចំណាំ៖ សូមជំនួស `<YOUR_GITHUB_USERNAME>` ដោយឈ្មោះ Account GitHub របស់អ្នក)*
+
+---
+
+### ជំហានទី ២: កំណត់ GitHub Pages & Custom Domain
+1. នៅលើទំព័រ GitHub Repository របស់អ្នក ចុចលើ Tab **Settings** (នៅ Menu ខាងលើ)។
+2. នៅ Menu ខាងឆ្វេង ស្វែងរកហើយចុចលើ **Pages**។
+3. នៅក្រោម **Build and deployment**:
+   - **Source**: ជ្រើសរើស `Deploy from a branch`
+   - **Branch**: ជ្រើសរើស `main` និង Folder `/ (root)`
    - ចុចប៊ូតុង **Save**
-4. រង់ចាំប្រហែល 1 ទៅ 2 នាទី Website របស់អ្នកនឹងដំណើរការនៅអាសយដ្ឋាន៖
-   `https://<YOUR_USERNAME>.github.io/angkorbim-website/`
-5. លោកអ្នកក៏អាចកំណត់ Custom Domain នៅក្នុងទំព័រ Settings នោះបានយ៉ាងងាយស្រួល។
+4. នៅក្រោម **Custom domain**:
+   - លោកអ្នកនឹងឃើញប្រព័ន្ធទាញយកឈ្មោះ `www.angkorbim.com` ដោយស្វ័យប្រវត្តិពី file `CNAME` ដែលយើងបានបង្កើត។
+   - ប្រសិនបើពុំទាន់ឃើញ សូមវាយបញ្ចូល `www.angkorbim.com` រួចចុច **Save**។
+   - ធិកលើប្រអប់ **Enforce HTTPS** (ដើម្បីឱ្យ Website ដំណើរការដោយមានសោរសុវត្ថិភាព `https://` ឥតគិតថ្លៃ)។
+
+---
+
+### ជំហានទី ៣: កំណត់ DNS Records នៅកន្លែងដែលលោកអ្នកបានទិញ Domain (DNS Configuration)
+សូមចូលទៅកាន់ផ្ទាំងគ្រប់គ្រង Domain របស់អ្នក (ដូចជា GoDaddy, Namecheap, Cloudflare, Google Domains ឬក្រុមហ៊ុនក្នុងស្រុក) រួចចូលទៅកាន់ **DNS Management** ឬ **Manage DNS** ហើយបន្ថែម Records ដូចខាងក្រោម៖
+
+#### ១. បន្ថែម A Records ចំនួន ៤ (សម្រាប់ Root Domain: `angkorbim.com`)
+| Type | Name / Host | IPv4 Value / Target | TTL |
+| :--- | :--- | :--- | :--- |
+| **A** | `@` (ឬទុកទទេ) | `185.199.108.153` | Automatic / 1 Hour |
+| **A** | `@` (ឬទុកទទេ) | `185.199.109.153` | Automatic / 1 Hour |
+| **A** | `@` (ឬទុកទទេ) | `185.199.110.153` | Automatic / 1 Hour |
+| **A** | `@` (ឬទុកទទេ) | `185.199.111.153` | Automatic / 1 Hour |
+
+#### ២. បន្ថែម CNAME Record ចំនួន ១ (សម្រាប់ `www.angkorbim.com`)
+| Type | Name / Host | Value / Target | TTL |
+| :--- | :--- | :--- | :--- |
+| **CNAME** | `www` | `<YOUR_GITHUB_USERNAME>.github.io` | Automatic / 1 Hour |
+
+*(ចំណាំ៖ សូមជំនួស `<YOUR_GITHUB_USERNAME>` ជាមួយឈ្មោះ Username GitHub របស់អ្នក ឧទាហរណ៍ `phearak.github.io`)*
+
+---
+
+### លទ្ធផល៖
+- ក្រោយពេលកំណត់រួច រង់ចាំប្រហែល ១៥ នាទីទៅ ១ ម៉ោងដើម្បីឱ្យ DNS ដំណើរការទូទាំងពិភពលោក។
+- Website របស់អ្នកនឹងដំណើរការបានទាំងនៅលើ `https://www.angkorbim.com` និង `https://angkorbim.com` ដោយស្វ័យប្រវត្តិ និងមាន Free SSL Certificate ជារៀងរហូតដោយពុំត្រូវការ VPS ឡើយ!
 
 ---
 
