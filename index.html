@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angkor BIM - កម្មវិធីជំនួយ Revit Plugins និងដំណោះស្រាយវិស្វកម្មឌីជីថល</title>
+    <meta name="description" content="Angkor BIM ផ្តល់ជូនដំណោះស្រាយ BIM គ្រប់ជ្រុងជ្រោយ រួមមាន Automation Tools, Revit Plugins (QS, Model, Rebar) និងសេវាកម្មប្រឹក្សាវិស្វកម្មសំណង់នៅកម្ពុជា។">
+    <meta name="keywords" content="Angkor BIM, Revit Plugins, BIM Cambodia, Revit QS, Revit Rebar, Revit Model, វិស្វកម្មសំណង់, គូរប្លង់ BIM">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Angkor BIM - កម្មវិធីជំនួយ Revit Plugins និងដំណោះស្រាយវិស្វកម្មឌីជីថល">
+    <meta property="og:description" content="ផ្តល់ជូនដំណោះស្រាយ BIM គ្រប់ជ្រុងជ្រោយ Revit Plugins, Automation Tools និងសេវាកម្មវិស្វកម្មសំណង់។">
+    <meta property="og:image" content="assets/images/logo.png">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Fonts: Kantumruy Pro (Khmer) & Inter (Latin) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/images/logo.png" alt="Angkor BIM Logo" class="brand-logo">
+                    <div class="brand-info">
+                        <span class="brand-title">Angkor BIM</span>
+                        <span class="brand-tagline">BIM & Engineering Solutions</span>
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> ទំព័រដើម</a></li>
+                    <li><a href="products.html" class="nav-link"><i class="fa-solid fa-box-open"></i> ផលិតផល</a></li>
+                    <li><a href="services.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> សេវាកម្ម</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> ទំនាក់ទំនង</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-sm">
+                        <i class="fa-brands fa-telegram"></i> <span>ទាក់ទងជាវ</span>
+                    </a>
+                    <button class="mobile-toggle" aria-label="បើកម៉ឺនុយ">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero-wrapper">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="badge badge-primary">
+                            <i class="fa-solid fa-cube"></i> វេទិកាឌីជីថល BIM ឈានមុខគេនៅកម្ពុជា
+                        </div>
+                        <h1>Angkor BIM <br><span class="gradient-text">កម្មវិធីជំនួយ និងដំណោះស្រាយ</span> វិស្វកម្មឌីជីថល</h1>
+                        <p class="hero-desc">
+                            ផ្តល់ជូនដំណោះស្រាយ BIM គ្រប់ជ្រុងជ្រោយ រួមមាន <strong>Automation Tools</strong>, <strong>Revit Plugins (QS, Model, Rebar)</strong> និងសេវាកម្មប្រឹក្សាវិស្វកម្ម ដើម្បីជួយឱ្យការងាររចនា សម្របសម្រួល និងគ្រប់គ្រងគម្រោងមានភាពលឿន សុក្រឹត និងប្រសិទ្ធភាពខ្ពស់បំផុត។
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="products.html" class="btn btn-primary btn-lg">
+                                <i class="fa-solid fa-cubes"></i> ស្វែងយល់ផលិតផល Revit Plugins
+                            </a>
+                            <a href="services.html" class="btn btn-secondary btn-lg">
+                                <i class="fa-solid fa-briefcase"></i> សេវាកម្មរបស់យើង
+                            </a>
+                        </div>
+                        <div class="hero-features-list">
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-circle-check"></i> ផលិតផលខ្មែរ អភិវឌ្ឍន៍ដោយកូនខ្មែរ
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-circle-check"></i> កាត់បន្ថយពេលធ្វើការរហូតដល់ 70%
+                            </div>
+                            <div class="hero-feature-item">
+                                <i class="fa-solid fa-circle-check"></i> គាំទ្របច្ចេកទេស 24/7
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-card-stack">
+                            <div class="hero-card-header">
+                                <div class="hero-card-badge">
+                                    <i class="fa-solid fa-chart-line"></i> ការប្រៀបធៀបប្រសិទ្ធភាពការងារ
+                                </div>
+                                <span class="badge badge-emerald">កើនឡើង 300%</span>
+                            </div>
+
+                            <div class="comparison-box highlight">
+                                <div class="comparison-label">
+                                    <span><i class="fa-solid fa-bolt" style="color: var(--accent);"></i> Angkor BIM Automation Tools</span>
+                                    <strong style="color: var(--accent);">95% លឿន & សុក្រឹត</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar-fill high"></div>
+                                </div>
+                            </div>
+
+                            <div class="comparison-box">
+                                <div class="comparison-label">
+                                    <span><i class="fa-solid fa-hand"></i> វិធីសាស្ត្រធម្មតា (Manual Workflow)</span>
+                                    <strong style="color: #94a3b8;">30% យឺត & ងាយខុស</strong>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar-fill low"></div>
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-around; text-align: center;">
+                                <div>
+                                    <h4 style="font-size: 1.4rem; color: var(--primary);">3+</h4>
+                                    <small style="color: var(--text-muted);">Revit Plugins</small>
+                                </div>
+                                <div style="border-left: 1px solid var(--border-subtle);"></div>
+                                <div>
+                                    <h4 style="font-size: 1.4rem; color: var(--accent);">100%</h4>
+                                    <small style="color: var(--text-muted);">សុក្រឹតភាពបច្ចេកទេស</small>
+                                </div>
+                                <div style="border-left: 1px solid var(--border-subtle);"></div>
+                                <div>
+                                    <h4 style="font-size: 1.4rem; color: var(--gold);">24/7</h4>
+                                    <small style="color: var(--text-muted);">Support & Updates</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-floating-stat">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <div>
+                                <h5 style="margin: 0; font-size: 0.95rem; color: var(--primary);">គុណភាព & ទំនុកចិត្ត</h5>
+                                <small style="color: var(--text-muted);">ស្របតាមស្តង់ដារអន្តរជាតិ</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Intro Section -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge badge-primary"><i class="fa-solid fa-circle-question"></i> អំពីយើង</span>
+                    <h2 class="section-title">តើអ្វីទៅជា Angkor BIM?</h2>
+                    <p class="section-subtitle">
+                        Angkor BIM គឺជាវេទិកាឌីជីថលសម្រាប់ Building Information Modeling (BIM) ដែលរួមបញ្ចូលកម្មវិធីជំនួយ (Plugins), ឧបករណ៍ស្វ័យប្រវត្តិកម្ម និងសេវាកម្មវិស្វកម្ម ដើម្បីគាំទ្រដល់ការរចនា ការគ្រប់គ្រង និងការអនុវត្តគម្រោងសំណង់ប្រកបដោយប្រសិទ្ធភាពខ្ពស់។
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon teal">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="card-title">Angkor BIM QS</h3>
+                        <p class="card-desc">
+                            កម្មវិធីដកបរិមាណ (Quantities Takeoff & BOQ) យ៉ាងរហ័សពីគម្រោង Revit ផ្ទាល់។ កាត់បន្ថយការងារគណនាដោយដៃរហូតដល់ 80% និងទាញទិន្នន័យទៅជា Excel ដោយស្វ័យប្រវត្តិ។
+                        </p>
+                        <a href="products.html#qs" class="btn btn-outline btn-sm">
+                            ព័ត៌មានលម្អិត <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon blue">
+                            <i class="fa-solid fa-cubes"></i>
+                        </div>
+                        <h3 class="card-title">Angkor BIM Model</h3>
+                        <p class="card-desc">
+                            ឧបករណ៍បង្កើតម៉ូដែល 3D Revit Model ដោយស្វ័យប្រវត្តិតាមរយៈប្លង់ CAD 2D និងមុខងារ Purge Management ជួយកាត់បន្ថយទំហំ File និងបង្កើនល្បឿនដំណើរការគម្រោង។
+                        </p>
+                        <a href="products.html#model" class="btn btn-outline btn-sm">
+                            ព័ត៌មានលម្អិត <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon rose">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </div>
+                        <h3 class="card-title">Angkor BIM Rebar</h3>
+                        <p class="card-desc">
+                            កម្មវិធីជំនាញសម្រាប់ការគូរ និងគណនាដែកសរសៃ (Rebar Detailing & BBS) ក្នុង Revit ដោយស្វ័យប្រវត្តិ ធានាបាននូវភាពលម្អិត កាត់បន្ថយការខាតបង់ដែកនៅការដ្ឋាន។
+                        </p>
+                        <a href="products.html#rebar" class="btn btn-outline btn-sm">
+                            ព័ត៌មានលម្អិត <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Special Bundle Banner -->
+                <div style="margin-top: 50px; background: linear-gradient(135deg, #0f294a, #1a4d8c); border-radius: var(--radius-xl); padding: 40px; color: #ffffff; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; box-shadow: var(--shadow-xl);">
+                    <div style="max-width: 600px;">
+                        <span class="badge badge-gold"><i class="fa-solid fa-fire"></i> កញ្ចប់ពិសេស Bundle</span>
+                        <h3 style="color: #ffffff; font-size: 1.8rem; margin: 10px 0;">ជាវកញ្ចប់ពិសេស Angkor BIM Bundle (3 ក្នុង 1)</h3>
+                        <p style="color: #cbd5e1; font-size: 1.05rem; margin: 0;">
+                            ទទួលបាន Plugins ទាំង 3 (QS + Model + Rebar) ក្នុងតម្លៃត្រឹមតែ <strong>$100 / ឆ្នាំ</strong> (តម្លៃដើម $150) ចំណេញភ្លាមៗ $50 ព្រមទាំងទទួលបានការ Support ពេញមួយឆ្នាំ!
+                        </p>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 16px;">
+                        <a href="products.html#bundle" class="btn btn-gold btn-lg">
+                            <i class="fa-solid fa-crown"></i> មើលកញ្ចប់ Bundle ($100)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview Section -->
+        <section class="section bg-muted">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge badge-primary"><i class="fa-solid fa-briefcase"></i> សេវាកម្មជំនាញ</span>
+                    <h2 class="section-title">សេវាកម្មវិស្វកម្ម និង BIM</h2>
+                    <p class="section-subtitle">
+                        ក្រៅពីការបង្កើត Software ជំនួយ Angkor BIM ក៏ផ្តល់នូវសេវាកម្មប្រឹក្សា និងអនុវត្តការងារបច្ចេកទេសសំណង់តាមស្តង់ដារអន្តរជាតិ។
+                    </p>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="card-icon blue"><i class="fa-solid fa-code"></i></div>
+                        <h3 class="card-title">Plugin Development</h3>
+                        <p class="card-desc">
+                            សេវាកម្មសរសេរកូដបង្កើត Plugin សម្រាប់ Autodesk Revit, AutoCAD និងកម្មវិធីផ្សេងៗ ដើម្បីដោះស្រាយបញ្ហាជាក់ស្តែងរបស់ក្រុមហ៊ុន។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon amber"><i class="fa-solid fa-building"></i></div>
+                        <h3 class="card-title">Structural Design</h3>
+                        <p class="card-desc">
+                            សេវាកម្មគណនាគ្រឿងបង្គុំអគារគ្រប់ប្រភេទ (Structural Design & Analysis) ប្រកបដោយសុវត្ថិភាព គុណភាពខ្ពស់ និងស្របតាមស្តង់ដារ ACI, Eurocode ។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon teal"><i class="fa-solid fa-cube"></i></div>
+                        <h3 class="card-title">Revit Model (BIM)</h3>
+                        <p class="card-desc">
+                            សេវាកម្មគូរប្លង់ និងបង្កើត 3D Model លម្អិត (LOD 300 - LOD 500) ទាំងផ្នែកស្ថាបត្យកម្ម គ្រឿងបង្គុំ និងប្រព័ន្ធទឹកភ្លើង (MEP) ។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon rose"><i class="fa-solid fa-draw-polygon"></i></div>
+                        <h3 class="card-title">Revit Shop Drawing</h3>
+                        <p class="card-desc">
+                            សេវាកម្មរៀបចំប្លង់ Shop Drawing ដែលមានភាពច្បាស់លាស់ ងាយស្រួលយល់ និងត្រឹមត្រូវតាមស្តង់ដារសម្រាប់ការសាងសង់ជាក់ស្តែងនៅការដ្ឋាន។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon teal"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                        <h3 class="card-title">Cost Estimation (5D BIM)</h3>
+                        <p class="card-desc">
+                            សេវាកម្មគណនាបរិមាណ (BOQ) និងប៉ាន់ប្រមាណតម្លៃគម្រោងដោយប្រើប្រាស់ 5D BIM ដែលធានាបាននូវភាពសុក្រឹតខ្ពស់ ងាយស្រួលផ្ទៀងផ្ទាត់។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-icon blue"><i class="fa-solid fa-calendar-check"></i></div>
+                        <h3 class="card-title">Project Planning (4D BIM)</h3>
+                        <p class="card-desc">
+                            ផែនការ និងកាលវិភាគនៃការសាងសង់ (4D BIM Sequencing) ដើម្បីឱ្យគម្រោងដំណើរការទៅដោយរលូន គ្រប់គ្រងពេលវេលា និងថវិកាបានល្អ។
+                        </p>
+                        <a href="services.html" class="btn btn-secondary btn-sm">ស្វែងយល់បន្ថែម</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section bg-white">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge badge-emerald"><i class="fa-solid fa-medal"></i> ហេតុអ្វីជ្រើសរើសយើង?</span>
+                    <h2 class="section-title">គុណសម្បត្តិលេចធ្លោរបស់ Angkor BIM</h2>
+                    <p class="section-subtitle">
+                        យើងប្តេជ្ញានាំយកបច្ចេកវិទ្យាទំនើបមកជួយវិស្វករ និងស្ថាបត្យករខ្មែរឱ្យធ្វើការកាន់តែលឿន និងមានប្រសិទ្ធភាពខ្ពស់។
+                    </p>
+                </div>
+
+                <div class="grid-4">
+                    <div style="background: var(--bg-muted); padding: 28px 22px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--border-subtle);">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(37, 99, 235, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 1.4rem;">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">អភិវឌ្ឍន៍ដោយកូនខ្មែរ</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">យល់ច្បាស់ពីតម្រូវការ និងបញ្ហាប្រឈមក្នុងវិស័យសំណង់ជាក់ស្តែងនៅកម្ពុជា។</p>
+                    </div>
+
+                    <div style="background: var(--bg-muted); padding: 28px 22px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--border-subtle);">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(16, 185, 129, 0.1); color: var(--emerald); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 1.4rem;">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">ល្បឿន & សុក្រឹតភាព</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">កាត់បន្ថយពេលវេលាធ្វើការងារដដែលៗ និងកាត់បន្ថយកំហុស Human Error។</p>
+                    </div>
+
+                    <div style="background: var(--bg-muted); padding: 28px 22px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--border-subtle);">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(245, 158, 11, 0.1); color: var(--gold); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 1.4rem;">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">តម្លៃសមរម្យបំផុត</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">ត្រឹមតែ $50/ឆ្នាំ សម្រាប់ Plugin នីមួយៗ ឬ $100 សម្រាប់កញ្ចប់ Bundle ទាំង 3។</p>
+                    </div>
+
+                    <div style="background: var(--bg-muted); padding: 28px 22px; border-radius: var(--radius-lg); text-align: center; border: 1px solid var(--border-subtle);">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(14, 165, 233, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 1.4rem;">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h4 style="font-size: 1.1rem; margin-bottom: 8px;">គាំទ្របច្ចេកទេសផ្ទាល់</h4>
+                        <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Support និងដោះស្រាយបញ្ហាបច្ចេកទេសរហ័សតាម Telegram និងទូរស័ព្ទ។</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA & Support / Donate Section -->
+        <section class="section bg-muted">
+            <div class="container">
+                <div class="section-header">
+                    <span class="badge badge-primary"><i class="fa-solid fa-handshake"></i> ចូលរួម និងគាំទ្រ</span>
+                    <h2 class="section-title">ត្រៀមខ្លួនបង្កើនប្រសិទ្ធភាពការងារហើយឬនៅ?</h2>
+                    <p class="section-subtitle">
+                        ប្រសិនបើអ្នកមានចម្ងល់ ចង់ជាវផលិតផល ឬចង់ចូលរួមចំណែកគាំទ្រដល់ការអភិវឌ្ឍន៍របស់ពួកយើង សូមទាក់ទងមកកាន់យើងខ្ញុំ។
+                    </p>
+                </div>
+
+                <div class="grid-2 container-narrow">
+                    <div class="card" style="text-align: center; align-items: center;">
+                        <div class="card-icon blue"><i class="fa-brands fa-telegram"></i></div>
+                        <h3 class="card-title">ទាក់ទងតាម Telegram</h3>
+                        <p class="card-desc">ជជែកផ្ទាល់ជាមួយក្រុមការងារ Angkor BIM ដើម្បីសាកសួរព័ត៌មាន ឬបញ្ជាទិញ License កម្មវិធីជំនួយ។</p>
+                        <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-lg">
+                            <i class="fa-brands fa-telegram"></i> ផ្ញើសារ Telegram (@angkorbim168)
+                        </a>
+                    </div>
+
+                    <div class="card" style="text-align: center; align-items: center;">
+                        <div class="card-icon rose"><i class="fa-solid fa-heart"></i></div>
+                        <h3 class="card-title">ចូលរួមឧបត្ថម្ភ (Donate)</h3>
+                        <p class="card-desc">ចូលរួមគាំទ្រដល់ការអភិវឌ្ឍន៍កម្មវិធី និងមាតិកាថ្មីៗបន្ថែមទៀតពីក្រុមការងារវិស្វករកម្ពុជា។</p>
+                        <button class="btn btn-danger btn-lg" data-open-modal="donateModal">
+                            <i class="fa-solid fa-qrcode"></i> ស្កេន KHQR ឧបត្ថម្ភ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <img src="assets/images/logo.png" alt="Angkor BIM Logo" style="width: 42px; height: 42px; border-radius: 8px;">
+                        <h3 style="margin: 0;">Angkor BIM</h3>
+                    </div>
+                    <p>
+                        វេទិកាឌីជីថល BIM ឈានមុខគេនៅកម្ពុជា ផ្តល់ជូននូវកម្មវិធីជំនួយ Revit Plugins, ដំណោះស្រាយស្វ័យប្រវត្តិកម្ម និងសេវាកម្មវិស្វកម្មសំណង់ប្រកបដោយគុណភាពខ្ពស់។
+                    </p>
+                    <div style="display: flex; gap: 10px; margin-top: 14px;">
+                        <a href="https://t.me/angkorbim168" target="_blank" class="social-btn telegram" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://facebook.com/angkorbim168/" target="_blank" class="social-btn facebook" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@Angkorbim168" target="_blank" class="social-btn youtube" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@angkorbim168" target="_blank" class="social-btn tiktok" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ទំព័ររហ័ស</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> ទំព័រដើម</a></li>
+                        <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> ផលិតផល Revit Plugins</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> សេវាកម្មរបស់យើង</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> អំពីយើង</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ផលិតផល</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#qs"><i class="fa-solid fa-angle-right"></i> Angkor BIM QS ($50)</a></li>
+                        <li><a href="products.html#model"><i class="fa-solid fa-angle-right"></i> Angkor BIM Model ($50)</a></li>
+                        <li><a href="products.html#rebar"><i class="fa-solid fa-angle-right"></i> Angkor BIM Rebar ($50)</a></li>
+                        <li><a href="products.html#bundle"><i class="fa-solid fa-angle-right"></i> កញ្ចប់ Bundle ($100)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ទំនាក់ទំនង</h4>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 8px;"></i> សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ រាជធានីភ្នំពេញ</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 8px;"></i> +855 97 690 5586</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-envelope" style="color: var(--accent); margin-right: 8px;"></i> angkorbim.kh@gmail.com</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-brands fa-telegram" style="color: var(--accent); margin-right: 8px;"></i> @angkorbim168</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Angkor BIM. រក្សាសិទ្ធិគ្រប់យ៉ាង (All Rights Reserved). ផលិតផលខ្មែរ អភិវឌ្ឍន៍ដោយកូនខ្មែរ។
+                </div>
+                <div>
+                    រចនាឡើងសម្រាប់ល្បឿនខ្ពស់ និងអាច Deploy ដោយពុំត្រូវការ VPS (Static Web App).
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Widgets -->
+    <div class="floating-widgets">
+        <a href="https://t.me/angkorbim168" target="_blank" class="floating-btn btn-float-telegram" title="ទាក់ទងតាម Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#" class="floating-btn btn-float-top" title="ឡើងលើវិញ">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Donate Modal (KHQR) -->
+    <div class="modal-overlay" id="donateModal">
+        <div class="modal-box">
+            <button class="modal-close-btn">&times;</button>
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: rgba(239, 68, 68, 0.1); color: #ef4444; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px auto; font-size: 1.4rem;">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 8px; color: var(--primary);">ចូលរួមឧបត្ថម្ភ (Donate)</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+                សូមស្កេន KHQR ខាងក្រោមដើម្បីចូលរួមចំណែកគាំទ្រដល់ការអភិវឌ្ឍន៍ និងការបង្កើតមាតិកាថ្មីៗពីក្រុមការងារ Angkor BIM
+            </p>
+            <div style="background: #f8fafc; padding: 14px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: inline-block; margin-bottom: 16px;">
+                <img src="assets/images/Khqr.jpg" alt="KHQR Code Angkor BIM" style="max-width: 240px; border-radius: 8px; box-shadow: var(--shadow-sm);">
+            </div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">
+                អរគុណយ៉ាងជ្រាលជ្រៅសម្រាប់ការចូលរួមចំណែកលើកកម្ពស់វិស័យសំណង់ឌីជីថលនៅកម្ពុជា!
+            </p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

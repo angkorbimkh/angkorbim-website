@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="km">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ផលិតផល Revit Plugins - Angkor BIM (QS, Model, Rebar, Bundle)</title>
+    <meta name="description" content="កម្មវិធីជំនួយ Autodesk Revit ដ៏មានអានុភាព៖ Angkor BIM QS, Angkor BIM Model, Angkor BIM Rebar និងកញ្ចប់ពិសេស Bundle 3-in-1 ដើម្បីស្វ័យប្រវត្តិកម្មការងារគូរប្លង់ និងគណនា។">
+    <meta name="keywords" content="Revit Plugins, Angkor BIM QS, Angkor BIM Model, Angkor BIM Rebar, Revit Rebar Detailing, BIM Automation Cambodia">
+
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Fonts: Kantumruy Pro & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Kantumruy+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-brand">
+                    <img src="assets/images/logo.png" alt="Angkor BIM Logo" class="brand-logo">
+                    <div class="brand-info">
+                        <span class="brand-title">Angkor BIM</span>
+                        <span class="brand-tagline">BIM & Engineering Solutions</span>
+                    </div>
+                </a>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> ទំព័រដើម</a></li>
+                    <li><a href="products.html" class="nav-link active"><i class="fa-solid fa-box-open"></i> ផលិតផល</a></li>
+                    <li><a href="services.html" class="nav-link"><i class="fa-solid fa-briefcase"></i> សេវាកម្ម</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fa-solid fa-circle-info"></i> អំពីយើង</a></li>
+                    <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-address-book"></i> ទំនាក់ទំនង</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-sm">
+                        <i class="fa-brands fa-telegram"></i> <span>ទាក់ទងជាវ</span>
+                    </a>
+                    <button class="mobile-toggle" aria-label="បើកម៉ឺនុយ">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Product Banner -->
+        <section class="product-hero-banner">
+            <div class="container">
+                <span class="badge badge-gold"><i class="fa-solid fa-bolt"></i> Revit Automation Solutions</span>
+                <h1>ផលិតផលកម្មវិធីជំនួយ (Revit Plugins)</h1>
+                <p>
+                    បង្កើនល្បឿន និងប្រសិទ្ធភាពការងារវិស្វកម្មសំណង់របស់អ្នកជាមួយ Plugins ឈានមុខគេ ដែលបង្កើតឡើងស្របតាមតម្រូវការជាក់ស្តែង និងស្តង់ដារបច្ចេកទេស។
+                </p>
+            </div>
+        </section>
+
+        <!-- Product Explorer Section -->
+        <section class="section">
+            <div class="container">
+                <div class="product-layout">
+
+                    <!-- Product Sidebar Tabs -->
+                    <aside class="product-sidebar">
+                        <div class="product-nav-item active" data-target="pane-qs">
+                            <div class="nav-item-icon" style="background: rgba(13, 148, 136, 0.1); color: var(--color-qs);">
+                                <i class="fa-solid fa-calculator"></i>
+                            </div>
+                            <div class="nav-item-info">
+                                <div class="nav-item-name">Angkor BIM QS</div>
+                                <div class="nav-item-tag">Quantities Takeoff & BOQ</div>
+                            </div>
+                            <div class="nav-item-price">$50<small style="font-size:0.75rem; color:var(--text-muted);">/ឆ្នាំ</small></div>
+                        </div>
+
+                        <div class="product-nav-item" data-target="pane-model">
+                            <div class="nav-item-icon" style="background: rgba(37, 99, 235, 0.1); color: var(--color-model);">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <div class="nav-item-info">
+                                <div class="nav-item-name">Angkor BIM Model</div>
+                                <div class="nav-item-tag">Automated 3D Modeling</div>
+                            </div>
+                            <div class="nav-item-price">$50<small style="font-size:0.75rem; color:var(--text-muted);">/ឆ្នាំ</small></div>
+                        </div>
+
+                        <div class="product-nav-item" data-target="pane-rebar">
+                            <div class="nav-item-icon" style="background: rgba(225, 29, 72, 0.1); color: var(--color-rebar);">
+                                <i class="fa-solid fa-bars-staggered"></i>
+                            </div>
+                            <div class="nav-item-info">
+                                <div class="nav-item-name">Angkor BIM Rebar</div>
+                                <div class="nav-item-tag">Rebar Detailing & BBS</div>
+                            </div>
+                            <div class="nav-item-price">$50<small style="font-size:0.75rem; color:var(--text-muted);">/ឆ្នាំ</small></div>
+                        </div>
+
+                        <div class="product-nav-item" data-target="pane-bundle">
+                            <div class="nav-item-icon" style="background: rgba(245, 158, 11, 0.1); color: var(--color-bundle);">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <div class="nav-item-info">
+                                <div class="nav-item-name">កញ្ចប់ពិសេស Bundle</div>
+                                <div class="nav-item-tag">Plugins ទាំង 3 (Save 33%)</div>
+                            </div>
+                            <div class="nav-item-price" style="color: #d97706;">$100<small style="font-size:0.75rem; color:var(--text-muted);">/ឆ្នាំ</small></div>
+                        </div>
+
+                        <!-- Sidebar Promotion Box -->
+                        <div class="bundle-sidebar-card">
+                            <span class="badge badge-gold"><i class="fa-solid fa-fire"></i> លក់ដាច់បំផុត</span>
+                            <h4>Angkor BIM Bundle</h4>
+                            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 8px;">
+                                ទទួលបាន Plugins ទាំង 3 ពេញលេញ ជាមួយ Support និង Update ឥតគិតថ្លៃ។
+                            </p>
+                            <div class="bundle-price-box">
+                                <span class="bundle-old-price">$150</span>
+                                <span class="bundle-new-price">$100</span>
+                                <span style="font-size: 0.9rem; color: #cbd5e1;">/ ឆ្នាំ</span>
+                            </div>
+                            <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-gold btn-sm" style="width: 100%; margin-top: 10px;">
+                                <i class="fa-brands fa-telegram"></i> ជាវកញ្ចប់ពិសេសនេះ
+                            </a>
+                        </div>
+
+                        <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); margin-top: 10px;">
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.88rem; color: var(--text-secondary);">
+                                <i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> ដំឡើងងាយស្រួល 1-Click
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.88rem; color: var(--text-secondary);">
+                                <i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Support ផ្ទាល់ជាមួយ Developer
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 10px; font-size: 0.88rem; color: var(--text-secondary);">
+                                <i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Update ឥតគិតថ្លៃគ្រប់ Version
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Product Detail Panes -->
+                    <div class="product-panes">
+
+                        <!-- PANE 1: Angkor BIM QS -->
+                        <div class="detail-pane active" id="pane-qs">
+                            <div class="pane-card">
+                                <div class="pane-header">
+                                    <div>
+                                        <span class="badge" style="background: rgba(13, 148, 136, 0.1); color: var(--color-qs);">
+                                            <i class="fa-solid fa-calculator"></i> Quantities Takeoff & Estimation
+                                        </span>
+                                        <h2 class="pane-header-title">Angkor BIM QS</h2>
+                                        <p style="color: var(--text-muted); margin: 0;">ឧបករណ៍ដកបរិមាណ និងប៉ាន់ប្រមាណតម្លៃគម្រោងដោយស្វ័យប្រវត្តិពី Revit Model</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="pane-price-badge">$50 <span>/ ឆ្នាំ</span></div>
+                                        <small style="color: var(--text-muted); display: block; margin-top: 4px;">1 PC License</small>
+                                    </div>
+                                </div>
+
+                                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">
+                                    មុខងារ <strong>Angkor BIM QS</strong> ត្រូវបានបង្កើតឡើងជាពិសេសសម្រាប់ជួយសម្រួលដល់ការងារដកបរិមាណ (Quantities Takeoff) យ៉ាងរហ័ស និងសុក្រឹតបំផុតពី Revit BIM Model។ វាជួយកាត់បន្ថយពេលវេលាធ្វើការងារគណនាដោយដៃរហូតដល់ <strong>80%</strong> និងលុបបំបាត់បញ្ហាកំហុសឆ្គងក្នុងការរាប់ ឬវាស់វែង ដោយអាចទាញទិន្នន័យទាំងអស់ជាតារាង Excel រួចជាស្រេចសម្រាប់យកទៅរៀបចំ BOQ ឬការដេញថ្លៃគម្រោង។
+                                </p>
+
+                                <!-- 3 Screens Side-by-Side for QS -->
+                                <div class="screens-row-3">
+                                    <!-- Screen 1 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 1: Auto Schedule Takeoff</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/qs-demo1.gif" alt="Angkor BIM QS - Auto Schedule Takeoff" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 1</strong>: ដកស្រង់បរិមាណ Auto Takeoff
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 2 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 2: Export to Excel</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/qs-demo2.gif" alt="Angkor BIM QS - Export to Excel" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 2</strong>: Export ជា Excel ជាមួយរូបមន្ត
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 3 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 3: Category Breakdown</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/qs-demo3.gif" alt="Angkor BIM QS - Category Breakdown" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 3</strong>: បែងចែកតាមជាន់ និង Elements
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">មុខងារសំខាន់ៗ (Key Features)</h3>
+                                <div class="feature-list-grid">
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Auto Quantity Takeoff</h4>
+                                            <p class="feature-box-text">ដកស្រង់បរិមាណបេតុង ទម្រពុម្ព ឥដ្ឋ ការ៉ូ និងសម្ភារៈសំណង់ទាំងអស់ដោយស្វ័យប្រវត្តិពី 3D Model។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon"><i class="fa-solid fa-file-excel"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Excel Export ជាមួយរូបមន្ត</h4>
+                                            <p class="feature-box-text">នាំចេញទិន្នន័យជាឯកសារ Excel ដែលមានរៀបចំជាជួរ ជួរឈរ និងរូបមន្តគណនារួចជាស្រេច ងាយស្រួលកែសម្រួល។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon"><i class="fa-solid fa-filter"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Filter តាម Category & Level</h4>
+                                            <p class="feature-box-text">អាចចម្រាញ់ទិន្នន័យតាមជាន់ តាមប្រភេទគ្រឿងបង្គុំ (Footing, Column, Beam, Slab) ឬតាម Phase នៃការសាងសង់។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon"><i class="fa-solid fa-clock"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">កាត់បន្ថយពេលវេលា 80%</h4>
+                                            <p class="feature-box-text">បំលែងការងារគណនាបរិមាណដែលត្រូវចំណាយពេលរាប់សប្តាហ៍ ឱ្យនៅត្រឹមតែប៉ុន្មាននាទីប៉ុណ្ណោះ។</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">ស័ក្តិសមសម្រាប់អ្នកណា?</h3>
+                                <div class="audience-grid">
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-calculator"></i>
+                                        <h5>Quantity Surveyors (QS)</h5>
+                                        <p>ត្រូវការដកបរិមាណលម្អិត និងត្រឹមត្រូវខ្ពស់ពី Revit Model សម្រាប់រៀបចំ BOQ</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                                        <h5>Estimators & Cost Planners</h5>
+                                        <p>ត្រូវការប៉ាន់ប្រមាណថ្លៃដើមគម្រោងយ៉ាងរហ័ស មុនពេលដេញថ្លៃ ឬសាងសង់</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-user-tie"></i>
+                                        <h5>BIM Managers / Coordinators</h5>
+                                        <p>ផ្ទៀងផ្ទាត់ទិន្នន័យ Model និងគ្រប់គ្រងព័ត៌មានបរិមាណក្នុងគម្រោង</p>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 36px; padding: 24px; background: var(--bg-muted); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                                    <div>
+                                        <h4 style="margin: 0 0 4px 0;">ចាប់អារម្មណ៍ Angkor BIM QS?</h4>
+                                        <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted);">តម្លៃត្រឹមតែ $50 / ឆ្នាំ រួមបញ្ចូលទាំងការ Support & Update</p>
+                                    </div>
+                                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-lg">
+                                        <i class="fa-brands fa-telegram"></i> ជាវ Angkor BIM QS ($50)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PANE 2: Angkor BIM Model -->
+                        <div class="detail-pane" id="pane-model">
+                            <div class="pane-card">
+                                <div class="pane-header">
+                                    <div>
+                                        <span class="badge" style="background: rgba(37, 99, 235, 0.1); color: var(--color-model);">
+                                            <i class="fa-solid fa-cubes"></i> Automated 3D BIM Modeling
+                                        </span>
+                                        <h2 class="pane-header-title">Angkor BIM Model</h2>
+                                        <p style="color: var(--text-muted); margin: 0;">ឧបករណ៍បង្កើតម៉ូដែល 3D Revit Model និងគ្រប់គ្រងទិន្នន័យគម្រោងដោយស្វ័យប្រវត្តិ</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="pane-price-badge" style="color: var(--color-model); background: rgba(37, 99, 235, 0.1); border-color: rgba(37, 99, 235, 0.2);">$50 <span>/ ឆ្នាំ</span></div>
+                                        <small style="color: var(--text-muted); display: block; margin-top: 4px;">1 PC License</small>
+                                    </div>
+                                </div>
+
+                                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">
+                                    <strong>Angkor BIM Model</strong> គឺជាឧបករណ៍ដ៏មានអានុភាពសម្រាប់ជួយដល់ការបង្កើតម៉ូដែល 3D Revit Model ដោយស្វ័យប្រវត្តិតាមរយៈប្លង់ CAD 2D។ ក្រៅពីនេះ វារួមបញ្ចូលមុខងារពិសេស <strong>Purge Management</strong> ដែលជួយលុបចោលទិន្នន័យ និង Families ដែលមិនប្រើប្រាស់ក្នុងគម្រោង ជួយកាត់បន្ថយទំហំ File របស់ Revit ឱ្យតូចជាងមុន និងធ្វើឱ្យកម្មវិធីដំណើរការបានលឿនរលូន។
+                                </p>
+
+                                <!-- 3 Screens Side-by-Side for Model -->
+                                <div class="screens-row-3">
+                                    <!-- Screen 1 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 1: Auto CAD to 3D Model</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/model-demo1.gif" alt="Angkor BIM Model - CAD to 3D Model" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 1</strong>: Convert 2D CAD ទៅ 3D Revit
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 2 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 2: Auto Column & Beam</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/model-demo2.gif" alt="Angkor BIM Model - Auto Column & Beam" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 2</strong>: Auto Column & Beam Placement
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 3 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 3: Purge Management</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/model-demo3.gif" alt="Angkor BIM Model - Purge Management" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 3</strong>: Purge Management សម្អាត File
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">មុខងារសំខាន់ៗ (Key Features)</h3>
+                                <div class="feature-list-grid">
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-model);"><i class="fa-solid fa-draw-polygon"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Convert 2D CAD ទៅ 3D Revit</h4>
+                                            <p class="feature-box-text">បម្លែងប្លង់ 2D AutoCAD ទៅជាគ្រឿងបង្គុំ 3D Revit (Columns, Beams, Footings, Slabs) យ៉ាងរហ័ស។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-model);"><i class="fa-solid fa-broom"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Purge Management (បង្កើនល្បឿន File)</h4>
+                                            <p class="feature-box-text">សម្អាត និងលុបចោលនូវ Families, Materials និង Parameters ដែលមិនប្រើ ដើម្បីកាត់បន្ថយទំហំ File និងការពារការគាំង។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-model);"><i class="fa-solid fa-layer-group"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Level & Grid Auto-Generator</h4>
+                                            <p class="feature-box-text">បង្កើតខ្សែក្រឡា (Grids) និងកម្ពស់ជាន់ (Levels) ដោយស្វ័យប្រវត្តិស្របតាមគំនូសព្រាងស្ថាបត្យកម្ម។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-model);"><i class="fa-solid fa-circle-check"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">កាត់បន្ថយកំហុស Human Error</h4>
+                                            <p class="feature-box-text">ធានាថាទីតាំងសសរ ធ្នឹម និងទំហំទាំងអស់ ត្រូវចំកណ្តាលខ្សែ axis ដោយមិនមានការរំកិលខុស។</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">ស័ក្តិសមសម្រាប់អ្នកណា?</h3>
+                                <div class="audience-grid">
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-building" style="color: var(--color-model);"></i>
+                                        <h5>Structural Engineers</h5>
+                                        <p>ចង់ Convert ប្លង់ Structure 2D ទៅ 3D Revit Model យ៉ាងរហ័សដើម្បី Coordination និងគណនាបន្ត</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-compass-drafting" style="color: var(--color-model);"></i>
+                                        <h5>Architects / Designers</h5>
+                                        <p>ត្រូវការ Revit Model ស្អាត ដើម្បីធ្វើ Presentation, Rendering ឬ Design Development</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-laptop-code" style="color: var(--color-model);"></i>
+                                        <h5>BIM Modelers</h5>
+                                        <p>ទទួលការងារ Modeling ច្រើន ហើយចង់បាន Faster & Error-free Workflow ដោយ Automation</p>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 36px; padding: 24px; background: var(--bg-muted); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                                    <div>
+                                        <h4 style="margin: 0 0 4px 0;">ចាប់អារម្មណ៍ Angkor BIM Model?</h4>
+                                        <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted);">តម្លៃត្រឹមតែ $50 / ឆ្នាំ រួមបញ្ចូលទាំងការ Support & Update</p>
+                                    </div>
+                                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-lg">
+                                        <i class="fa-brands fa-telegram"></i> ជាវ Angkor BIM Model ($50)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PANE 3: Angkor BIM Rebar -->
+                        <div class="detail-pane" id="pane-rebar">
+                            <div class="pane-card">
+                                <div class="pane-header">
+                                    <div>
+                                        <span class="badge" style="background: rgba(225, 29, 72, 0.1); color: var(--color-rebar);">
+                                            <i class="fa-solid fa-bars-staggered"></i> Automated Rebar Detailing & BBS
+                                        </span>
+                                        <h2 class="pane-header-title">Angkor BIM Rebar</h2>
+                                        <p style="color: var(--text-muted); margin: 0;">កម្មវិធីជំនាញសម្រាប់ការគូរ គណនាដែកសរសៃ និងបញ្ជីរាយនាមដែក (BBS) ក្នុង Revit</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div class="pane-price-badge" style="color: var(--color-rebar); background: rgba(225, 29, 72, 0.1); border-color: rgba(225, 29, 72, 0.2);">$50 <span>/ ឆ្នាំ</span></div>
+                                        <small style="color: var(--text-muted); display: block; margin-top: 4px;">1 PC License</small>
+                                    </div>
+                                </div>
+
+                                <p style="font-size: 1.05rem; line-height: 1.7; color: var(--text-secondary);">
+                                    មុខងារ <strong>Angkor BIM Rebar</strong> គឺជាឧបករណ៍ដ៏មានអានុភាពសម្រាប់ជួយស្វ័យប្រវត្តិកម្ម និងពន្លឿនការងារគូរម៉ូដែលដែកសរសៃនៅក្នុង Revit។ វាមានសមត្ថភាពបង្កើតដែកបញ្ចូលក្នុងរចនាសម្ព័ន្ធស្ទើរគ្រប់ប្រភេទយ៉ាងរហ័ស ផ្តល់ឧបករណ៍កែសម្រួលតភ្ជាប់ដែក (Lap Splice) កាត់ដែកតាមប្រវែងស្តង់ដារទីផ្សារ និងទាញប្លង់ពុម្ពប្រភេទ (Typical Details) ដោយស្វ័យប្រវត្តិ។ បន្ថែមពីនេះ វាក៏អនុញ្ញាតឱ្យគ្រប់គ្រង 3D Rebar Solid, កំណត់ពណ៌តាមមុខកាត់ (Diameter) និងទាញយកបញ្ជីរាយនាមដែក (BBS) សម្រាប់យកទៅអនុវត្តផ្ទាល់នៅការដ្ឋានប្រកបដោយប្រសិទ្ធភាពខ្ពស់។
+                                </p>
+
+                                <!-- 3 Screens Side-by-Side for Rebar -->
+                                <div class="screens-row-3">
+                                    <!-- Screen 1 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 1: Beam & Column Rebar</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/rebar_demo1.gif" alt="Angkor BIM Rebar - Beam & Column Rebar" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 1</strong>: Beam & Column Rebar Generator
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 2 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 2: Footing & Typical Details</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/rebar-demo2.gif" alt="Angkor BIM Rebar - Footing & Typical" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 2</strong>: Footing & Typical Rebar Details
+                                        </div>
+                                    </div>
+
+                                    <!-- Screen 3 -->
+                                    <div class="screen-card">
+                                        <div class="screen-card-topbar">
+                                            <div class="screen-dots">
+                                                <span class="dot red"></span>
+                                                <span class="dot yellow"></span>
+                                                <span class="dot green"></span>
+                                            </div>
+                                            <div class="screen-title"><i class="fa-solid fa-play"></i> Demo 3: BBS & 3D Solid View</div>
+                                        </div>
+                                        <div class="screen-card-body" title="ចុចដើម្បីពង្រីកមើលទំហំធំ">
+                                            <img src="assets/gif/rebar-demo3.gif" alt="Angkor BIM Rebar - BBS & 3D Solid" loading="lazy">
+                                        </div>
+                                        <div class="screen-card-caption">
+                                            <strong>Demo 3</strong>: BBS Schedule & 3D Solid View
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">មុខងារសំខាន់ៗ (Key Features)</h3>
+                                <div class="feature-list-grid">
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-bolt"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Generate Rebar ដោយស្វ័យប្រវត្តិ</h4>
+                                            <p class="feature-box-text">បង្កើតដែកសរសៃសម្រាប់ គ្រឹះ សសរ ធ្នឹម កម្រាល និងជញ្ជាំង ដោយស្វ័យប្រវត្តិតាមការកំណត់វិស្វកម្ម។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-link"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Quick Rebar Lap & Split</h4>
+                                            <p class="feature-box-text">សម្រួលការតភ្ជាប់ដែក (Lap Splice) និងកាត់បំបែកដែកសរសៃវែងៗតាមប្រវែងស្តង់ដារទីផ្សារ (11.7m ឬ 12m) ដោយស្វ័យប្រវត្តិ។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-palette"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Color By Diameter & 3D Solid</h4>
+                                            <p class="feature-box-text">កំណត់ពណ៌ដែកសរសៃតាមទំហំមុខកាត់ (Diameter) និងបិទបើកការបង្ហាញដែកជា 3D Solid ពេញលេញដោយចុច 1 ដង។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-table-list"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">BBS Rebar (Bar Bending Schedule)</h4>
+                                            <p class="feature-box-text">ទាញយកបញ្ជីរាយនាមដែកដែលបង្ហាញរូបរាងបត់ (Shape Codes) ប្រវែងកាត់ និងទម្ងន់សរុប សម្រាប់បញ្ជាទិញ និងកាត់នៅការដ្ឋាន។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-scale-balanced"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Rebar Ratio (kg/m³)</h4>
+                                            <p class="feature-box-text">គណនាភាគរយ ឬដង់ស៊ីតេដែកធៀបនឹងមាឌបេតុងដោយស្វ័យប្រវត្តិ សម្រាប់ជួយក្នុងការផ្ទៀងផ្ទាត់តម្លៃសម្ភារៈ។</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="feature-box">
+                                        <div class="feature-box-icon" style="color: var(--color-rebar);"><i class="fa-solid fa-file-contract"></i></div>
+                                        <div>
+                                            <h4 class="feature-box-title">Typical Rebar Generator</h4>
+                                            <p class="feature-box-text">ទាញប្លង់ពុម្ពប្រភេទ (Typical Details) សម្រាប់សសរ និងធ្នឹម ដោយស្វ័យប្រវត្តិរៀបចំចូលទៅក្នុង Sheet ប្លង់។</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">ស័ក្តិសមសម្រាប់អ្នកណា?</h3>
+                                <div class="audience-grid">
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-bars-staggered" style="color: var(--color-rebar);"></i>
+                                        <h5>Rebar Detailers</h5>
+                                        <p>ចេញ Shop Drawing ដែក ជាមួយ BBS លម្អិតស្តង់ដារ ដើម្បីផ្ញើទៅ Fabricator ឬ Contractor</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-shield-halved" style="color: var(--color-rebar);"></i>
+                                        <h5>Structural Engineers</h5>
+                                        <p>Verify Design ក្នុង 3D ហើយ Auto-Check Spacing, Cover, Congestion ដែកមុន Approve Drawing</p>
+                                    </div>
+                                    <div class="audience-card">
+                                        <i class="fa-solid fa-helmet-safety" style="color: var(--color-rebar);"></i>
+                                        <h5>Site Supervisors / Contractors</h5>
+                                        <p>ត្រូវការ BBS ច្បាស់លាស់ ដើម្បីបញ្ជាទិញ និងគ្រប់គ្រងការកាត់ដែកនៅ Site មិនឱ្យខាតបង់</p>
+                                    </div>
+                                </div>
+
+                                <div style="margin-top: 36px; padding: 24px; background: var(--bg-muted); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                                    <div>
+                                        <h4 style="margin: 0 0 4px 0;">ចាប់អារម្មណ៍ Angkor BIM Rebar?</h4>
+                                        <p style="margin: 0; font-size: 0.92rem; color: var(--text-muted);">តម្លៃត្រឹមតែ $50 / ឆ្នាំ រួមបញ្ចូលទាំងការ Support & Update</p>
+                                    </div>
+                                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-telegram btn-lg">
+                                        <i class="fa-brands fa-telegram"></i> ជាវ Angkor BIM Rebar ($50)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- PANE 4: Bundle Pack -->
+                        <div class="detail-pane" id="pane-bundle">
+                            <div class="pane-card" style="border: 2px solid var(--gold); box-shadow: var(--shadow-lg);">
+                                <div class="pane-header">
+                                    <div>
+                                        <span class="badge badge-gold"><i class="fa-solid fa-crown"></i> កញ្ចប់ចំណេញច្រើនបំផុត (Best Value)</span>
+                                        <h2 class="pane-header-title">Angkor BIM Bundle (3 ក្នុង 1)</h2>
+                                        <p style="color: var(--text-muted); margin: 0;">ទទួលបានកម្មវិធីជំនួយទាំង 3 ពេញលេញ៖ QS + Model + Rebar ក្នុងកញ្ចប់តែមួយ</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="display: flex; align-items: baseline; gap: 8px;">
+                                            <span style="font-size: 1.3rem; text-decoration: line-through; color: #94a3b8; font-weight: 600;">$150</span>
+                                            <div class="pane-price-badge" style="color: #d97706; background: rgba(245, 158, 11, 0.12); border-color: var(--gold); font-size: 1.8rem;">$100 <span>/ ឆ្នាំ</span></div>
+                                        </div>
+                                        <small style="color: var(--emerald); font-weight: 700; display: block; margin-top: 4px;">ចំណេញ $50 (Save 33%)</small>
+                                    </div>
+                                </div>
+
+                                <div style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.08), rgba(14, 165, 233, 0.05)); padding: 24px; border-radius: var(--radius-lg); border: 1px solid rgba(245, 158, 11, 0.2); margin-bottom: 28px;">
+                                    <h3 style="font-size: 1.25rem; color: var(--primary); margin-bottom: 12px;"><i class="fa-solid fa-gift" style="color: var(--gold); margin-right: 8px;"></i> អត្ថប្រយោជន៍ដែលទទួលបានក្នុងកញ្ចប់ពិសេសនេះ៖</h3>
+                                    <ul style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px;">
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Angkor BIM QS (តម្លៃដើម $50)</li>
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Angkor BIM Model (តម្លៃដើម $50)</li>
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Angkor BIM Rebar (តម្លៃដើម $50)</li>
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Support បច្ចេកទេសជាអាទិភាព (Priority)</li>
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> Update គ្រប់ Revit Version ឥតគិតថ្លៃ</li>
+                                        <li style="display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-primary);"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> វីដេអូបង្រៀនប្រើប្រាស់លម្អិត</li>
+                                    </ul>
+                                </div>
+
+                                <h3 style="font-size: 1.3rem; margin: 30px 0 16px 0; color: var(--primary);">តារាងប្រៀបធៀបផលិតផល (Product Comparison)</h3>
+                                <div style="overflow-x: auto;">
+                                    <table style="width: 100%; border-collapse: collapse; font-size: 0.95rem; text-align: left; background: #ffffff; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
+                                        <thead>
+                                            <tr style="background: var(--bg-muted); border-bottom: 2px solid var(--border-medium);">
+                                                <th style="padding: 14px 18px;">មុខងារ / លក្ខណៈសម្បត្តិ</th>
+                                                <th style="padding: 14px 18px; text-align: center;">Angkor BIM QS</th>
+                                                <th style="padding: 14px 18px; text-align: center;">Angkor BIM Model</th>
+                                                <th style="padding: 14px 18px; text-align: center;">Angkor BIM Rebar</th>
+                                                <th style="padding: 14px 18px; text-align: center; background: rgba(245, 158, 11, 0.15);">Bundle Pack</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">ដកបរិមាណ (Quantity Takeoff)</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">Export BOQ ជា Excel</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">Convert 2D CAD ទៅ 3D Revit</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">Purge Management សម្អាត File</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">Auto Rebar Generator (សសរ, ធ្នឹម, គ្រឹះ)</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="border-bottom: 1px solid var(--border-subtle);">
+                                                <td style="padding: 12px 18px; font-weight: 600;">BBS Rebar (បញ្ជីកាត់ពត់ដែក)</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: #94a3b8;">-</td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald);"><i class="fa-solid fa-check"></i></td>
+                                                <td style="padding: 12px 18px; text-align: center; color: var(--emerald); background: rgba(245, 158, 11, 0.05);"><i class="fa-solid fa-check"></i></td>
+                                            </tr>
+                                            <tr style="background: var(--bg-muted);">
+                                                <td style="padding: 14px 18px; font-weight: 700;">តម្លៃសរុប / ឆ្នាំ</td>
+                                                <td style="padding: 14px 18px; text-align: center; font-weight: 700; color: var(--primary);">$50</td>
+                                                <td style="padding: 14px 18px; text-align: center; font-weight: 700; color: var(--primary);">$50</td>
+                                                <td style="padding: 14px 18px; text-align: center; font-weight: 700; color: var(--primary);">$50</td>
+                                                <td style="padding: 14px 18px; text-align: center; font-weight: 800; color: #d97706; background: rgba(245, 158, 11, 0.15); font-size: 1.15rem;">$100 (Save $50)</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="margin-top: 36px; padding: 24px; background: linear-gradient(135deg, #0f294a, #1a4d8c); color: #ffffff; border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+                                    <div>
+                                        <h4 style="margin: 0 0 4px 0; color: #ffffff;">បញ្ជាទិញកញ្ចប់ Angkor BIM Bundle ឥឡូវនេះ</h4>
+                                        <p style="margin: 0; font-size: 0.92rem; color: #cbd5e1;">តម្លៃប្រូម៉ូសិនពិសេស $100 / ឆ្នាំ ទទួលបាន Plugins ទាំង 3 ភ្លាមៗ</p>
+                                    </div>
+                                    <a href="https://t.me/angkorbim168" target="_blank" class="btn btn-gold btn-lg">
+                                        <i class="fa-brands fa-telegram"></i> ជាវកញ្ចប់ Bundle ($100)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- System Requirements & FAQ -->
+                <div style="margin-top: 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                    <div style="background: #ffffff; padding: 36px; border-radius: var(--radius-xl); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(14, 165, 233, 0.1); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; margin: 0;">លក្ខខណ្ឌតម្រូវប្រព័ន្ធ (System Requirements)</h3>
+                        </div>
+                        <ul style="line-height: 2;">
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> <strong>Autodesk Revit:</strong> 2020, 2021, 2022, 2023, 2024, 2025, 2026</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> <strong>ប្រព័ន្ធប្រតិបត្តិការ:</strong> Windows 10 / 11 (64-bit)</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> <strong>RAM:</strong> អប្បបរមា 8GB (ណែនាំ 16GB ឡើងទៅ)</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> <strong>Framework:</strong> .NET Framework 4.8 ឬ .NET 8.0</li>
+                            <li style="display: flex; align-items: center; gap: 10px;"><i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i> <strong>Internet:</strong> សម្រាប់ការ Activate License ដំបូង</li>
+                        </ul>
+                    </div>
+
+                    <div style="background: #ffffff; padding: 36px; border-radius: var(--radius-xl); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(37, 99, 235, 0.1); color: var(--secondary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                                <i class="fa-solid fa-circle-question"></i>
+                            </div>
+                            <h3 style="font-size: 1.3rem; margin: 0;">សំណួរដែលសួរញឹកញាប់ (FAQ)</h3>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 14px;">
+                            <div>
+                                <h5 style="font-size: 0.98rem; margin-bottom: 4px; color: var(--primary);"><i class="fa-solid fa-question" style="color: var(--accent); margin-right: 6px;"></i> តើរបៀបដំឡើង និង Activate ដូចម្តេច?</h5>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">បន្ទាប់ពីជាវ អ្នកនឹងទទួលបាន File Setup សម្រាប់ចុចដំឡើងដោយស្វ័យប្រវត្តិ និង License Key សម្រាប់បញ្ចូលក្នុង Revit ភ្លាមៗ។</p>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 0.98rem; margin-bottom: 4px; color: var(--primary);"><i class="fa-solid fa-question" style="color: var(--accent); margin-right: 6px;"></i> តើមានការបង្រៀនរបៀបប្រើប្រាស់ដែរឬទេ?</h5>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">មានវីដេអូបង្រៀនជាភាសាខ្មែរមួយជំហានម្តងៗ និងការ Support ផ្ទាល់តាម Telegram បើសិនមានបញ្ហាបច្ចេកទេស។</p>
+                            </div>
+                            <div>
+                                <h5 style="font-size: 0.98rem; margin-bottom: 4px; color: var(--primary);"><i class="fa-solid fa-question" style="color: var(--accent); margin-right: 6px;"></i> បើដូរម៉ាស៊ីនកុំព្យូទ័រ តើអាចផ្ទេរ License បានទេ?</h5>
+                                <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">អាចផ្ទេរបាន! ដោយគ្រាន់តែទាក់ទងមកក្រុមការងារដើម្បី Reset Machine ID ចាស់ និង Activate លើម៉ាស៊ីនថ្មី។</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <img src="assets/images/logo.png" alt="Angkor BIM Logo" style="width: 42px; height: 42px; border-radius: 8px;">
+                        <h3 style="margin: 0;">Angkor BIM</h3>
+                    </div>
+                    <p>
+                        វេទិកាឌីជីថល BIM ឈានមុខគេនៅកម្ពុជា ផ្តល់ជូននូវកម្មវិធីជំនួយ Revit Plugins, ដំណោះស្រាយស្វ័យប្រវត្តិកម្ម និងសេវាកម្មវិស្វកម្មសំណង់ប្រកបដោយគុណភាពខ្ពស់។
+                    </p>
+                    <div style="display: flex; gap: 10px; margin-top: 14px;">
+                        <a href="https://t.me/angkorbim168" target="_blank" class="social-btn telegram" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://facebook.com/angkorbim168/" target="_blank" class="social-btn facebook" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@Angkorbim168" target="_blank" class="social-btn youtube" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@angkorbim168" target="_blank" class="social-btn tiktok" style="padding: 8px 14px; font-size: 0.85rem;"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ទំព័ររហ័ស</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fa-solid fa-angle-right"></i> ទំព័រដើម</a></li>
+                        <li><a href="products.html"><i class="fa-solid fa-angle-right"></i> ផលិតផល Revit Plugins</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-angle-right"></i> សេវាកម្មរបស់យើង</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angle-right"></i> អំពីយើង</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angle-right"></i> ទំនាក់ទំនង</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ផលិតផល</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html#qs"><i class="fa-solid fa-angle-right"></i> Angkor BIM QS ($50)</a></li>
+                        <li><a href="products.html#model"><i class="fa-solid fa-angle-right"></i> Angkor BIM Model ($50)</a></li>
+                        <li><a href="products.html#rebar"><i class="fa-solid fa-angle-right"></i> Angkor BIM Rebar ($50)</a></li>
+                        <li><a href="products.html#bundle"><i class="fa-solid fa-angle-right"></i> កញ្ចប់ Bundle ($100)</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>ទំនាក់ទំនង</h4>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-location-dot" style="color: var(--accent); margin-right: 8px;"></i> សង្កាត់ទឹកថ្លា ខណ្ឌសែនសុខ រាជធានីភ្នំពេញ</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-phone" style="color: var(--accent); margin-right: 8px;"></i> +855 97 690 5586</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-solid fa-envelope" style="color: var(--accent); margin-right: 8px;"></i> angkorbim.kh@gmail.com</p>
+                    <p style="margin-bottom: 8px; font-size: 0.9rem;"><i class="fa-brands fa-telegram" style="color: var(--accent); margin-right: 8px;"></i> @angkorbim168</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Angkor BIM. រក្សាសិទ្ធិគ្រប់យ៉ាង (All Rights Reserved). ផលិតផលខ្មែរ អភិវឌ្ឍន៍ដោយកូនខ្មែរ។
+                </div>
+                <div>
+                    រចនាឡើងសម្រាប់ល្បឿនខ្ពស់ និងអាច Deploy ដោយពុំត្រូវការ VPS (Static Web App).
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Widgets -->
+    <div class="floating-widgets">
+        <a href="https://t.me/angkorbim168" target="_blank" class="floating-btn btn-float-telegram" title="ទាក់ទងតាម Telegram">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+        <a href="#" class="floating-btn btn-float-top" title="ឡើងលើវិញ">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Lightbox Modal for Fullscreen Demo Zoom -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <img src="" alt="Enlarged Demo Screen" class="lightbox-img" id="lightboxImg">
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
